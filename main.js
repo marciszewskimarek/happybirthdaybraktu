@@ -22,7 +22,7 @@ for (const id of ids)
     // content.appendChild(btn);
     const video = document.createElement("video");
     video.id = id;
-    video.src = "./video/" + id + ".mov";
+    video.src = "/video/" + id + ".mov";
     video.muted = true;
     video.loop = true;
     video.play = true;
