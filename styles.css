@@ -4,38 +4,94 @@
   
 body {
     margin: 0;
-    font-family: Arial;
-    font-size: 17px;
+    background-color: black;
 }
 
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-  }
+#content {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    gap: 0%;
+    /* padding: 10px; */
+    align-content: center;   
+}
 
-  .content {
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
+@media screen and (min-width: 768px) {
+    #content {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+
+#content > video {
     width: 100%;
-    padding: 20px;
-  }
-  
-  #myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-    background: #000;
-    color: #fff;
+    height: 100%;
     cursor: pointer;
-  }
-  
-  #myBtn:hover {
-    background: #ddd;
-    color: black;
-  }
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+
+#cover {
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    cursor: pointer;
+    top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#text-center {
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#text-center > div {
+    /* background: orange; */
+    /* width: 400px;
+    height: 200px;
+    margin: -50px 0 0 -50px;
+    padding: 100px; */
+    padding: 70px 30px;
+    /* border: 3px solid green; */
+    text-align: center;
+    font-size: 4rem;
+}
+
+#x-element {
+    position: absolute;
+    right: 30;
+    top: 20;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+#x-element > div {
+    color: blanchedalmond;
+    position: absolute;
+    top: 5;
+    right: 11;
+}
